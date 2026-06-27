@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# SPA: cualquier ruta cae en index.html (la navegación es por estado en React)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
