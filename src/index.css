@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════════════
+   TOKENS DE MARCA — One-Kit (mismos colores que la herramienta
+   de Cash Flow, expuestos como utilidades de Tailwind v4).
+   Uso: bg-bg, bg-card, text-ink, text-ocean, border-cyan, font-exo…
+   ═══════════════════════════════════════════════════════════════ */
+@theme {
+  /* Bases */
+  --color-bg: #000000;
+  --color-card: #0d0d0f;
+  --color-panel: #0a0a0c;
+
+  /* Texto */
+  --color-ink: #fefeff;
+  --color-ink-soft: #c6c9d7;
+  --color-mute: #a4a8c0;
+
+  /* Líneas */
+  --color-line: #312d35;
+  --color-line-soft: #1a181d;
+
+  /* Marca ONE */
+  --color-ocean: #e17bd7; /* primario · rosa One */
+  --color-cyan: #6be1e3; /* secundario · cian neón */
+
+  /* Status */
+  --color-amber: #e4c76a; /* alerta · dorado premium */
+  --color-success: #6be1e3;
+  --color-warn: #e4c76a;
+  --color-alert: #e17bd7;
+
+  /* Tipografías */
+  --font-exo: "Exo 2", system-ui, sans-serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-ink);
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-exo);
+  letter-spacing: -0.01em;
+}
+
+/* Scrollbar fino al estilo One-Kit */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-mute);
+}
